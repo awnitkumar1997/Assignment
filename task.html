@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment</title>
+    <style>
+        div {
+            height: 300px;
+            width: 200px;
+            background-color: white;
+            padding-left: 10px;
+            padding-top: 20px;
+            margin-top: 200px;
+            margin-left: 50%;
+        }
+
+        body {
+            background-color: #34495E;
+        }
+        label
+        {
+            color:rgb(155, 151, 151);
+        }
+        input[type=submit]
+        {
+            background-color: rgb(151, 60, 216);
+            color: white;
+            border: none;
+            min-width: 175px;
+            min-height: 35px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function display()
+        {
+            var user=document.getElementById("username").value;
+            document.write("<b>"+user+"</b>");
+            document.write("&nbsp;&nbsp");
+            var time=new Date();
+            document.write(time.toLocaleString('en-US',{hour:'numeric',hour12:true,minute:'numeric'}));
+            document.write("<br><br>");
+            var element1=document.createElement("INPUT");
+            element1.type="text";
+            element1.placeholder="Message";
+            document.body.appendChild(element1);
+            var element2=document.createElement("INPUT");
+            element2.type="button";
+            element2.value="Send";
+            element2.style.backgroundColor="rgb(151, 60, 216)";
+            element2.style.color="white";
+            element2.style.border="none";
+            element2.style.fontSize="16px";
+            element2.style.width="50px";
+            element2.style.marginLeft="10px";
+            element2.style.padding="2px";
+            document.body.appendChild(element2);
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="display()">
+        <div>
+            <h1>Join</h1>
+            <label>Display name</label>
+            <br><br><input type="text" id="username" placeholder="Display name" required>
+            <br><br><label>Email</label>
+            <br><br><input type="email" placeholder="Email" required>
+            <br><br><input type="submit" value="Join">
+        </div>
+    </form>
+</body>
+
+</html>
